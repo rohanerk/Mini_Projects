@@ -23,7 +23,7 @@ emailRegex = re.compile(r'''(
     
 
 
-# TODO: Find matches in the clipboard text
+#: Find matches in the clipboard text
 
 text = str(pyperclip.paste())
 matches = []
@@ -39,7 +39,7 @@ for groups in emailRegex.findall(text):
     matches.append(groups[0])
     
 
-# TODO: Copy results to the clipboard.
+#: Copy results to the clipboard.
 
 if len(matches)> 0:
     pyperclip.copy('\n'.join(matches))
