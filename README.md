@@ -67,10 +67,23 @@ The script defines a function called `strongpassword()` that:
 
 ---
 
-## 🧪 Example Usage
 
-```bash
-$ python password_checker.py
-Please enter your new password:
-abc123
-No uppercase character found
+
+3📝 Random Quiz Generator
+
+This Python script generates multiple randomized quiz files along with their answer keys. Each quiz tests knowledge of U.S. state capitals, with the order of the questions and answer options randomized to ensure each quiz is unique.
+
+## 📌 Features
+
+- Generates multiple quiz versions (default: 35)
+- Creates separate answer keys for grading
+- Randomizes:
+  - The order of the states
+  - The placement of the correct answer among the options
+- Saves files neatly in a specified output directory
+
+## 📂 File Output
+
+Each run will generate:
+- `capitalsquiz1.txt`, `capitalsquiz2.txt`, ..., `capitalsquiz35.txt` — quiz files
+- `capitalsquiz_answer1.txt`, ..., `capitalsquiz_answer35.txt` — answer keys
