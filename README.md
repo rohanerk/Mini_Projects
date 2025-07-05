@@ -69,7 +69,7 @@ The script defines a function called `strongpassword()` that:
 
 
 
-3📝 Random Quiz Generator
+# 3📝 Random Quiz Generator
 
 This Python script generates multiple randomized quiz files along with their answer keys. Each quiz tests knowledge of U.S. state capitals, with the order of the questions and answer options randomized to ensure each quiz is unique.
 
