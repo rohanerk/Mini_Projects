@@ -56,7 +56,4 @@ for quizNum in range(35):
     answerKeyFile.close()
 
 
-# TODO: Create the quiz and answer key files.
-# TODO: Write out the header for the quiz.
-# TODO: Shuffle the order of the states.
-# TODO: Loop through all 50 states, making a question for each.
+
