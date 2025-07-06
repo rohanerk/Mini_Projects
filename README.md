@@ -90,27 +90,65 @@ Each run will generate:
 
 # 4. Renaming Dates
 
-To rename files in the current directory from American date format (MM-DD-YYYY) to European date format (DD-MM-YYYY) within the filenames.
+# renameDates.py
 
-How It Works:
+## Overview
 
-Scans all filenames in the current working directory.
+`renameDates.py` is a Python script that searches through filenames in the current working directory and renames files with dates in the American format (`MM-DD-YYYY`) to the European format (`DD-MM-YYYY`).
 
-Identifies filenames with dates in MM-DD-YYYY format using regular expressions.
+### Example
 
-Converts those dates to DD-MM-YYYY format.
+**Before:**
+invoice_04-25-2024.txt
+report_12-31-2023.pdf
 
-Renames the files accordingly.
+ruby
+Copy
+Edit
 
-Example:
-Before running the script:
+**After running `renameDates.py`:**
+invoice_25-04-2024.txt
+report_31-12-2023.pdf
 
-meeting_03-15-2023.txt
+yaml
+Copy
+Edit
 
-summary_11-05-2022.docx
+---
 
-After running the script:
+## Features
 
-meeting_15-03-2023.txt
+- Scans all filenames in the current working directory.
+- Detects dates in MM-DD-YYYY format using regex.
+- Renames files by swapping MM and DD to convert to DD-MM-YYYY format.
+- Skips files that do not match the American date pattern.
+- Supports dry-run mode (optional customization).
 
-summary_05-11-2022.docx
+---
+
+## Usage
+
+### Requirements
+
+- Python 3.x
+
+### Running the Script
+
+1. Open your terminal or command prompt.
+2. Navigate to the directory containing `renameDates.py` and the target files.
+3. Run the script:
+
+```bash
+python renameDates.py
+Regex Pattern Used
+The script uses the following regular expression to match American-style dates in filenames:
+
+python
+Copy
+Edit
+r"""^(.*?)           # all text before the date
+    ((0|1)?\d)-      # month
+    ((0|1|2|3)?\d)-  # day
+    ((19|20)\d\d)    # year
+    (.*?)$           # all text after the date
+"""
