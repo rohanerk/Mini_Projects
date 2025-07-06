@@ -87,3 +87,30 @@ This Python script generates multiple randomized quiz files along with their ans
 Each run will generate:
 - `capitalsquiz1.txt`, `capitalsquiz2.txt`, ..., `capitalsquiz35.txt` — quiz files
 - `capitalsquiz_answer1.txt`, ..., `capitalsquiz_answer35.txt` — answer keys
+
+# 4. Renaming Dates
+
+To rename files in the current directory from American date format (MM-DD-YYYY) to European date format (DD-MM-YYYY) within the filenames.
+
+How It Works:
+
+Scans all filenames in the current working directory.
+
+Identifies filenames with dates in MM-DD-YYYY format using regular expressions.
+
+Converts those dates to DD-MM-YYYY format.
+
+Renames the files accordingly.
+
+Example:
+Before running the script:
+
+meeting_03-15-2023.txt
+
+summary_11-05-2022.docx
+
+After running the script:
+
+meeting_15-03-2023.txt
+
+summary_05-11-2022.docx
