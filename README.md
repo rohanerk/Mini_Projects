@@ -89,11 +89,6 @@ Each run will generate:
 - `capitalsquiz_answer1.txt`, ..., `capitalsquiz_answer35.txt` — answer keys
 
 # 4. Renaming Dates
-
-# renameDates.py
-
-## Overview
-
 `renameDates.py` is a Python script that searches through filenames in the current working directory and renames files with dates in the American format (`MM-DD-YYYY`) to the European format (`DD-MM-YYYY`).
 
 ### Example
