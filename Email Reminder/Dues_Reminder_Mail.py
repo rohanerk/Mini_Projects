@@ -25,7 +25,7 @@ for r in range(2,sheet.max_row + 1):
 smtpObj = smtplib.SMTP('smtp.gmail.com',587)
 smtpObj.ehlo()
 smtpObj.starttls()
-smtpObj.login('rohanerkesarkar@gmail.com' , sys.argv[1])
+smtpObj.login('my_email_id' , sys.argv[1])
 
 # Send out reminder mails
 
@@ -33,7 +33,7 @@ for name, email in unpaidMembers.items():
     body = "Subject: %s dues unpaid\nDear %s,\nRecords show that you have not paid dues for %s. Please make this payment as soon as possible. Thank you!" % (latestMonth, name, latestMonth)
 
     print('Sending mail to %s...' % email)
-    sendmailStatus = smtpObj.sendmail('rohanerkesarkar@gmail.com',email,body)
+    sendmailStatus = smtpObj.sendmail('my_email_id',email,body)
 
     if sendmailStatus != {}:
         print('There was a problem sending mail to %s:%s' % (email,sendmailStatus))
